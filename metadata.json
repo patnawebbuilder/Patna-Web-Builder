@@ -1,0 +1,6 @@
+{
+  "name": "Patna Web Builder",
+  "description": "Patna Web Builder - Startup by Ravi Ranjan (6287339804). Custom .com & .in websites for local businesses starting at ₹10,000.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
