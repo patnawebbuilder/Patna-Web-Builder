@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Phone, MessageSquare, Menu, X, Globe, ShieldCheck } from 'lucide-react';
+import { Phone, MessageSquare, Menu, X, Globe, ShieldCheck, Instagram } from 'lucide-react';
 import { STARTUP_INFO } from '../data/pricingData';
 
 interface HeaderProps {
@@ -24,7 +24,7 @@ export const Header: React.FC<HeaderProps> = ({ onNavigate }) => {
             <span className="font-medium text-amber-300">Patna's Premier Web Startup</span>
             <span className="hidden md:inline text-slate-400">| Owned by {STARTUP_INFO.owner}</span>
           </div>
-          <div className="flex items-center gap-4 text-slate-300">
+          <div className="flex items-center gap-3 sm:gap-4 text-slate-300">
             <a 
               href={`tel:${STARTUP_INFO.contactNo}`} 
               className="hover:text-amber-300 flex items-center gap-1 font-semibold transition-colors"
@@ -40,6 +40,15 @@ export const Header: React.FC<HeaderProps> = ({ onNavigate }) => {
             >
               <MessageSquare className="w-3 h-3 text-emerald-400" />
               <span>WhatsApp</span>
+            </a>
+            <a 
+              href={STARTUP_INFO.instagramUrl} 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="hover:text-pink-400 flex items-center gap-1 font-semibold text-pink-300 transition-colors"
+            >
+              <Instagram className="w-3 h-3 text-pink-400" />
+              <span>@{STARTUP_INFO.instagramHandle}</span>
             </a>
           </div>
         </div>
@@ -189,6 +198,15 @@ export const Header: React.FC<HeaderProps> = ({ onNavigate }) => {
             >
               <MessageSquare className="w-4 h-4" />
               <span>Chat on WhatsApp (6287339804)</span>
+            </a>
+            <a 
+              href={STARTUP_INFO.instagramUrl} 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="w-full text-center py-2.5 rounded-lg text-sm font-bold bg-gradient-to-r from-purple-600 via-pink-600 to-amber-500 text-white flex items-center justify-center gap-2 shadow"
+            >
+              <Instagram className="w-4 h-4" />
+              <span>Follow on Instagram (@{STARTUP_INFO.instagramHandle})</span>
             </a>
           </div>
         </div>

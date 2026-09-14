@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Phone, MessageSquare, MapPin, User, Clock, Send, CheckCircle2 } from 'lucide-react';
+import { Phone, MessageSquare, MapPin, User, Clock, Send, CheckCircle2, Instagram } from 'lucide-react';
 import { STARTUP_INFO } from '../data/pricingData';
 
 export const ContactSection: React.FC = () => {
@@ -86,6 +86,24 @@ export const ContactSection: React.FC = () => {
               </div>
 
               <div className="flex items-start gap-3">
+                <div className="w-9 h-9 rounded-xl bg-slate-800 text-pink-400 flex items-center justify-center shrink-0">
+                  <Instagram className="w-4 h-4" />
+                </div>
+                <div>
+                  <span className="text-slate-400 block">Official Instagram ID:</span>
+                  <a 
+                    href={STARTUP_INFO.instagramUrl} 
+                    target="_blank" 
+                    rel="noopener noreferrer" 
+                    className="text-sm font-bold text-pink-400 hover:text-pink-300 hover:underline flex items-center gap-1 transition-colors"
+                  >
+                    <span>@{STARTUP_INFO.instagramHandle}</span>
+                    <span className="text-[10px] bg-pink-500/20 text-pink-300 px-1.5 py-0.5 rounded font-medium">1-Click Open</span>
+                  </a>
+                </div>
+              </div>
+
+              <div className="flex items-start gap-3">
                 <div className="w-9 h-9 rounded-xl bg-slate-800 text-purple-400 flex items-center justify-center shrink-0">
                   <Clock className="w-4 h-4" />
                 </div>
@@ -100,7 +118,7 @@ export const ContactSection: React.FC = () => {
             <div className="pt-2 flex flex-col sm:flex-row gap-3">
               <a
                 href={`tel:${STARTUP_INFO.contactNo}`}
-                className="flex-1 py-3 px-4 rounded-xl font-bold text-xs bg-blue-600 hover:bg-blue-500 text-white shadow text-center flex items-center justify-center gap-2 transition-colors"
+                className="flex-1 py-3 px-3 rounded-xl font-bold text-xs bg-blue-600 hover:bg-blue-500 text-white shadow text-center flex items-center justify-center gap-1.5 transition-colors"
               >
                 <Phone className="w-4 h-4" />
                 <span>Call {STARTUP_INFO.contactNo}</span>
@@ -109,10 +127,19 @@ export const ContactSection: React.FC = () => {
                 href={STARTUP_INFO.whatsappUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex-1 py-3 px-4 rounded-xl font-bold text-xs bg-emerald-600 hover:bg-emerald-500 text-white shadow text-center flex items-center justify-center gap-2 transition-colors"
+                className="flex-1 py-3 px-3 rounded-xl font-bold text-xs bg-emerald-600 hover:bg-emerald-500 text-white shadow text-center flex items-center justify-center gap-1.5 transition-colors"
               >
                 <MessageSquare className="w-4 h-4" />
-                <span>WhatsApp Message</span>
+                <span>WhatsApp</span>
+              </a>
+              <a
+                href={STARTUP_INFO.instagramUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex-1 py-3 px-3 rounded-xl font-bold text-xs bg-gradient-to-r from-purple-600 via-pink-600 to-amber-500 hover:opacity-95 text-white shadow text-center flex items-center justify-center gap-1.5 transition-opacity"
+              >
+                <Instagram className="w-4 h-4" />
+                <span>Instagram</span>
               </a>
             </div>
           </div>

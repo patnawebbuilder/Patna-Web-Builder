@@ -5,6 +5,8 @@ export const STARTUP_INFO = {
   owner: 'Ravi Ranjan',
   contactNo: '6287339804',
   whatsappNumber: '916287339804',
+  instagramHandle: 'ravi.yadav.h',
+  instagramUrl: 'https://www.instagram.com/ravi.yadav.h',
   whatsappMessage: 'Hello Ravi Sir, I want to create a website for my business in Patna.',
   whatsappUrl: 'https://wa.me/916287339804?text=Hello%20Ravi%20Sir%2C%20I%20want%20to%20get%20a%20website%20made%20for%20my%20business%20via%20Patna%20Web%20Builder.',
   creationFee: 10000,

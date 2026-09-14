@@ -1,5 +1,5 @@
 import React from 'react';
-import { ShieldCheck, Phone, ArrowRight, Zap, CheckCircle2, User, Globe, Sparkles } from 'lucide-react';
+import { ShieldCheck, Phone, ArrowRight, Zap, CheckCircle2, User, Globe, Sparkles, Instagram } from 'lucide-react';
 import { STARTUP_INFO } from '../data/pricingData';
 
 interface HeroProps {
@@ -27,6 +27,15 @@ export const Hero: React.FC<HeroProps> = ({ onNavigate }) => {
             <User className="w-3.5 h-3.5 text-blue-400" />
             <span>Owned by: <strong className="text-white">{STARTUP_INFO.owner}</strong></span>
           </span>
+          <a 
+            href={STARTUP_INFO.instagramUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-pink-500/20 text-pink-300 border border-pink-500/30 hover:bg-pink-500/30 transition-colors"
+          >
+            <Instagram className="w-3.5 h-3.5 text-pink-400" />
+            <span>Instagram: <strong>@{STARTUP_INFO.instagramHandle}</strong></span>
+          </a>
           <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-medium bg-emerald-500/20 text-emerald-300 border border-emerald-500/30">
             <Phone className="w-3.5 h-3.5" />
             <span>Direct Call: <strong>{STARTUP_INFO.contactNo}</strong></span>
@@ -108,10 +117,20 @@ export const Hero: React.FC<HeroProps> = ({ onNavigate }) => {
               href={STARTUP_INFO.whatsappUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="w-full sm:w-auto px-6 py-3.5 rounded-xl font-bold text-sm bg-emerald-600 hover:bg-emerald-500 text-white shadow-md flex items-center justify-center gap-2 transition-colors"
+              className="w-full sm:w-auto px-5 py-3.5 rounded-xl font-bold text-sm bg-emerald-600 hover:bg-emerald-500 text-white shadow-md flex items-center justify-center gap-2 transition-colors"
             >
               <Phone className="w-4 h-4" />
-              <span>Call Ravi Ranjan ({STARTUP_INFO.contactNo})</span>
+              <span>Call ({STARTUP_INFO.contactNo})</span>
+            </a>
+
+            <a 
+              href={STARTUP_INFO.instagramUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-full sm:w-auto px-5 py-3.5 rounded-xl font-bold text-sm bg-gradient-to-r from-purple-600 via-pink-600 to-amber-500 hover:opacity-95 text-white shadow-md flex items-center justify-center gap-2 transition-opacity"
+            >
+              <Instagram className="w-4 h-4" />
+              <span>Instagram (@{STARTUP_INFO.instagramHandle})</span>
             </a>
           </div>
         </div>

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Globe, Phone, MessageSquare, Heart } from 'lucide-react';
+import { Globe, Phone, MessageSquare, Instagram } from 'lucide-react';
 import { STARTUP_INFO } from '../data/pricingData';
 
 interface FooterProps {
@@ -72,6 +72,17 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
               <Phone className="w-4 h-4 text-blue-400" />
               <span>{STARTUP_INFO.contactNo}</span>
             </a>
+            <div className="pt-1">
+              <a 
+                href={STARTUP_INFO.instagramUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-pink-500/10 border border-pink-500/30 text-pink-400 font-bold hover:bg-pink-500/20 transition-colors"
+              >
+                <Instagram className="w-4 h-4" />
+                <span>@{STARTUP_INFO.instagramHandle}</span>
+              </a>
+            </div>
             <p className="text-slate-400">{STARTUP_INFO.location}</p>
           </div>
         </div>
